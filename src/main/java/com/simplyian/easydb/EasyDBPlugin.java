@@ -1,9 +1,11 @@
 package com.simplyian.easydb;
 
 import com.simplyian.easydb.command.DBReloadCommand;
+import java.io.IOException;
 import java.util.logging.Level;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
 
 /**
  * EasyDBPlugin Main class.
@@ -18,6 +20,13 @@ public class EasyDBPlugin extends JavaPlugin {
 
         EasyDB.setInstance(this);
         reloadDb();
+
+        try {
+            Metrics metrics = new Metrics(this);
+            metrics.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
 
         getCommand("dbreload").setExecutor(new DBReloadCommand(this));
 
