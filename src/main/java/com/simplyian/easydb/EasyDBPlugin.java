@@ -2,6 +2,7 @@ package com.simplyian.easydb;
 
 import com.simplyian.easydb.command.DBReloadCommand;
 import java.util.logging.Level;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -38,11 +39,16 @@ public class EasyDBPlugin extends JavaPlugin {
      * Loads the database.
      */
     public void reloadDb() {
-        String dbUser = getConfig().getString("db.user");
-        String dbPass = getConfig().getString("db.pass", "");
-        String dbHost = getConfig().getString("db.host");
-        int dbPort = getConfig().getInt("db.port");
-        String dbName = getConfig().getString("db.name");
+        ConfigurationSection s = getConfig().getConfigurationSection("db");
+        if (s == null) {
+            s = getConfig().createSection("db");
+        }
+
+        String dbUser = s.getString("user");
+        String dbPass = s.getString("pass", "");
+        String dbHost = s.getString("host");
+        int dbPort = s.getInt("port");
+        String dbName = s.getString("name");
         db = new Database(this, dbUser, dbPass, dbHost, dbPort, dbName);
     }
 
