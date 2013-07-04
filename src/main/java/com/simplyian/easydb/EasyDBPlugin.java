@@ -1,6 +1,7 @@
 package com.simplyian.easydb;
 
 import com.simplyian.easydb.command.DBReloadCommand;
+import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -14,9 +15,23 @@ public class EasyDBPlugin extends JavaPlugin {
         // Make sure the config has been made
         saveDefaultConfig();
 
+        EasyDB.setInstance(this);
         reloadDb();
 
         getCommand("dbreload").setExecutor(new DBReloadCommand(this));
+
+        if (!db.isValid()) {
+            getLogger().log(Level.WARNING, "Database credentials are invalid. Please check your credentials and run /dbreload.");
+        } else {
+            getLogger().log(Level.INFO, "Connected to database at " + db.getSource().getServerName() + ":" + db.getSource().getPort() + " successfully.");
+        }
+        getLogger().log(Level.INFO, "Plugin loaded.");
+    }
+
+    @Override
+    public void onDisable() {
+        EasyDB.setInstance(null);
+        getLogger().log(Level.INFO, "Plugin unloaded.");
     }
 
     /**

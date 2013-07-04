@@ -44,6 +44,15 @@ public final class Database {
     }
 
     /**
+     * Gets the MysqlDataSource associated with the database.
+     *
+     * @return
+     */
+    public MysqlDataSource getSource() {
+        return source;
+    }
+
+    /**
      * Executes a database update.
      *
      * @param query
