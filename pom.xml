@@ -41,12 +41,12 @@
 
     <distributionManagement>
         <repository>
-            <id>deployment</id>
+            <id>nl-releases</id>
             <name>NL Release Repository</name>
             <url>http://nexus.new-liberty.net/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>deployment</id>
+            <id>nl-snapshots</id>
             <name>NL Snapshot Repository</name>
             <url>http://nexus.new-liberty.net/content/repositories/snapshots/</url>
         </snapshotRepository>
