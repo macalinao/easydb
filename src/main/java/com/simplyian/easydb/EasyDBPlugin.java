@@ -54,6 +54,7 @@ public class EasyDBPlugin extends JavaPlugin {
      * Loads the database.
      */
     public void reloadDb() {
+        reloadConfig();
         ConfigurationSection s = getConfig().getConfigurationSection("db");
         if (s == null) {
             s = getConfig().createSection("db");
