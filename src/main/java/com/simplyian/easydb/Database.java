@@ -12,7 +12,7 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
  * Database stuff. MySQL sucks.
  */
 public final class Database {
-    private final ResultSetHandler SCALAR_HANDLER = new ScalarHandler();
+    private static final ResultSetHandler SCALAR_HANDLER = new ScalarHandler();
 
     private final EasyDBPlugin plugin;
 
