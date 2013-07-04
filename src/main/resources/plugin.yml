@@ -4,6 +4,8 @@ version: 0.1.0
 author: AlbireoX
 website: http://simplyian.com
 
+load: STARTUP
+
 commands:
   dbconfig:
     description: Configures database credentials.
