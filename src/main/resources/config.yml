@@ -1,7 +1,12 @@
+# Database configuration (MySQL).
 db:
+  # Host (probably don't need to change)
   host: localhost
+  # Port (also don't need to change)
   port: 3306
+  # MySQL Username
   user: root
+  # MySQL Password (Remove line if you don't have one)
   pass: pass
+  # Database name
   name: test
-
