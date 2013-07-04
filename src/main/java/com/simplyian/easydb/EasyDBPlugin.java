@@ -1,7 +1,6 @@
 package com.simplyian.easydb;
 
-import java.util.logging.Level;
-import org.bukkit.Bukkit;
+import com.simplyian.easydb.command.DBReloadCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -12,13 +11,15 @@ public class EasyDBPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        loadDb();
+        reloadDb();
+
+        getCommand("dbreload").setExecutor(new DBReloadCommand(this));
     }
 
     /**
      * Loads the database.
      */
-    private void loadDb() {
+    public void reloadDb() {
         String dbUser = getConfig().getString("db.user");
         String dbPass = getConfig().getString("db.pass", "");
         String dbHost = getConfig().getString("db.host");

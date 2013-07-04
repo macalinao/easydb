@@ -5,9 +5,9 @@ author: AlbireoX
 website: http://simplyian.com
 
 commands:
-  reloaddb:
+  dbreload:
     desciption: Reloads the database.
-    usage: /easydb (about|reload|version)
+    usage: /dbreload
 
 permissions:
   easydb.reload:
