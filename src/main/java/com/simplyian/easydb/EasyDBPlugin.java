@@ -44,10 +44,10 @@ public class EasyDBPlugin extends JavaPlugin {
             s = getConfig().createSection("db");
         }
 
-        String dbUser = s.getString("user");
-        String dbPass = s.getString("pass", "");
         String dbHost = s.getString("host");
         int dbPort = s.getInt("port");
+        String dbUser = s.getString("user");
+        String dbPass = s.getString("pass", "");
         String dbName = s.getString("name");
         db = new Database(this, dbUser, dbPass, dbHost, dbPort, dbName);
     }
