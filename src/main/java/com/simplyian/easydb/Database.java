@@ -14,11 +14,11 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 public final class Database {
     private final ResultSetHandler SCALAR_HANDLER = new ScalarHandler();
 
-    private final EasyDB plugin;
+    private final EasyDBPlugin plugin;
 
     private final MysqlDataSource source;
 
-    public Database(EasyDB plugin, String user, String pass, String host, int port, String database) {
+    public Database(EasyDBPlugin plugin, String user, String pass, String host, int port, String database) {
         this.plugin = plugin;
 
         source = new MysqlDataSource();

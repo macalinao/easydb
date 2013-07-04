@@ -1,5 +1,5 @@
 name: EasyDB
-main: com.simplyian.easydb.EasyDB
+main: com.simplyian.easydb.EasyDBPlugin
 version: 0.1.0
 author: AlbireoX
 website: http://simplyian.com
