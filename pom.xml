@@ -54,12 +54,8 @@
 
     <repositories>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>Plugin Metrics</id>
-            <url>http://repo.mcstats.org/content/repositories/public</url>
+            <id>nl-repo</id>
+            <url>http://nexus.new-liberty.net/content/groups/public/</url>
         </repository>
     </repositories>
 
