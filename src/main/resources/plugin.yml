@@ -1,0 +1,14 @@
+name: EasyDB
+main: com.simplyian.easydb.EasyDB
+version: 0.1.0
+author: AlbireoX
+website: http://simplyian.com
+
+commands:
+  reloaddb:
+    desciption: Reloads the database.
+    usage: /easydb (about|reload|version)
+
+permissions:
+  easydb.reload:
+    description: Allows reloading of the database.
