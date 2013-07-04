@@ -13,6 +13,10 @@
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>Plugin Metrics</id>
+            <url>http://repo.mcstats.org/content/repositories/public</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -32,6 +36,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mcstats</groupId>
+            <artifactId>metrics</artifactId>
+            <version>1.2=SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -70,6 +80,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>commons-dbutils:commons-dbutils</include>
+                                    <include>org.mcstats:metrics</include>
                                 </includes>
                             </artifactSet>
                         </configuration>
