@@ -39,6 +39,19 @@
         <url>https://github.com/simplyianm/easydb/issues</url>
     </issueManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>NL Release Repository</name>
+            <url>ttp://nexus.new-liberty.net/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>NL Snapshot Repository</name>
+            <url>http://nexus.new-liberty.net/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>bukkit-repo</id>
