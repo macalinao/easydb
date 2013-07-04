@@ -11,6 +11,9 @@ public class EasyDBPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // Make sure the config has been made
+        saveDefaultConfig();
+
         reloadDb();
 
         getCommand("dbreload").setExecutor(new DBReloadCommand(this));
