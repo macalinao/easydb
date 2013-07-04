@@ -5,15 +5,12 @@ author: AlbireoX
 website: http://simplyian.com
 
 commands:
-  dbget:
-    description: Gets database credentials.
-    usage: /dbget <host|port|user|pass|name>
-  dbset:
-    description: Sets database credentials.
-    usage: /dbset <host|port|user|pass|name> <value>
+  dbconfig:
+    description: Configures database credentials.
+    usage: 'Usage: /dbconfig <host|port|user|pass|name> [value]'
   dbreload:
     desciption: Reloads the database.
-    usage: /dbreload
+    usage: 'Usage: /dbreload'
 
 permissions:
   easydb.*:
