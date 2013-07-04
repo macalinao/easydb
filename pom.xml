@@ -41,14 +41,14 @@
 
     <distributionManagement>
         <repository>
-            <id>nexus</id>
+            <id>deployment</id>
             <name>NL Release Repository</name>
-            <url>ttp://nexus.new-liberty.net/content/repositories/releases</url>
+            <url>http://nexus.new-liberty.net/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus</id>
+            <id>deployment</id>
             <name>NL Snapshot Repository</name>
-            <url>http://nexus.new-liberty.net/content/repositories/snapshots</url>
+            <url>http://nexus.new-liberty.net/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
