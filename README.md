@@ -12,8 +12,8 @@ To use this plugin as a dependency in your project, add the following to your po
 
 ```xml
 <repository>
-    <id>new-liberty-repo</id>
-    <url>http://ci.new-liberty.net/plugin/repository/everything/</url>
+    <id>nl-repo</id>
+    <url>http://nexus.new-liberty.net/content/groups/public/</url>
 </repository>
 ```
 
