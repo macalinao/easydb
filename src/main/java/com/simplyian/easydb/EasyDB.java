@@ -6,7 +6,7 @@ package com.simplyian.easydb;
 public class EasyDB {
     private static EasyDBPlugin instance;
 
-    static void setInstance(EasyDBPlugin plugin) {
+    static public void setInstance(EasyDBPlugin plugin) {
         instance = plugin;
     }
 
@@ -15,7 +15,7 @@ public class EasyDB {
      *
      * @return
      */
-    public static Database getDb() {
+    static public Database getDb() {
         return instance.getDb();
     }
 }
