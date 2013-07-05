@@ -33,7 +33,7 @@ public final class Database {
      * Attempts to connect to the database to check if the database credentials
      * are valid.
      *
-     * @return
+     * @return True if the credentials are valid.
      */
     public boolean isValid() {
         try {
@@ -46,7 +46,7 @@ public final class Database {
     /**
      * Gets the MysqlDataSource associated with the database.
      *
-     * @return
+     * @return The MysqlDataSource.
      */
     public MysqlDataSource getSource() {
         return source;
@@ -55,7 +55,9 @@ public final class Database {
     /**
      * Executes a database update.
      *
-     * @param query
+     * @param query The database query to perform with `?` in place of
+     * parameters.
+     * @param params The query parameters
      */
     public void update(String query, Object... params) {
         QueryRunner run = new QueryRunner(source);
@@ -73,11 +75,12 @@ public final class Database {
     /**
      * Executes a database query.
      *
-     * @param <T>
-     * @param query
-     * @param handler
-     * @param params
-     * @return
+     * @param <T> The return type
+     * @param query The database query to perform with `?` in place of
+     * parameters.
+     * @param handler A {@link ResultSetHandler} to handle the query data.
+     * @param params The query parameters
+     * @return The result of the query
      */
     public <T> T query(String query, ResultSetHandler<T> handler, Object... params) {
         QueryRunner run = new QueryRunner(source);
@@ -96,10 +99,11 @@ public final class Database {
     /**
      * Gets a value from the database. The column desired must be the first.
      *
-     * @param query
+     * @param query The database query to perform with `?` in place of
+     * parameters.
      * @param def The default value to return if the value is null.
-     * @param params
-     * @return
+     * @param params The query parameters
+     * @return The value
      */
     public Object get(String query, Object def, Object... params) {
         Object ret = query(query, SCALAR_HANDLER, params);
