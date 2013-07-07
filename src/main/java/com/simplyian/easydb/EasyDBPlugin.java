@@ -2,10 +2,12 @@ package com.simplyian.easydb;
 
 import com.simplyian.easydb.command.DBConfigCommand;
 import com.simplyian.easydb.command.DBReloadCommand;
+import com.simplyian.easydb.event.DBConfigReloadEvent;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
@@ -66,6 +68,8 @@ public class EasyDBPlugin extends JavaPlugin {
         String dbPass = s.getString("pass", "");
         String dbName = s.getString("name");
         db = new Database(this, dbUser, dbPass, dbHost, dbPort, dbName);
+
+        Bukkit.getPluginManager().callEvent(new DBConfigReloadEvent(db.isValid()));
     }
 
     /**
