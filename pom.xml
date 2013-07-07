@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <name>EasyDB</name>
     <groupId>com.simplyian</groupId>
     <artifactId>easydb</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <url>http://simplyian.com</url>
-    <inceptionYear>2013></inceptionYear>
+    <inceptionYear>2013&gt;</inceptionYear>
     <description>Plugin to interface with MySQL databases easier.</description>
 
     <properties>
@@ -27,7 +25,8 @@
         <developerConnection>scm:git:git@github.com:simplyianm/easydb.git</developerConnection>
         <connection>scm:git:git://github.com/simplyianm/easydb.git</connection>
         <url>https://github.com/simplyianm/easydb</url>
-    </scm>
+      <tag>easydb-0.1.0</tag>
+  </scm>
 
     <ciManagement>
         <system>jenkins</system>
