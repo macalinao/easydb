@@ -25,8 +25,8 @@
         <developerConnection>scm:git:git@github.com:simplyianm/easydb.git</developerConnection>
         <connection>scm:git:git://github.com/simplyianm/easydb.git</connection>
         <url>https://github.com/simplyianm/easydb</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <ciManagement>
         <system>jenkins</system>
