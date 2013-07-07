@@ -5,7 +5,7 @@
     <name>EasyDB</name>
     <groupId>com.simplyian</groupId>
     <artifactId>easydb</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
     <url>http://simplyian.com</url>
     <inceptionYear>2013&gt;</inceptionYear>
     <description>Plugin to interface with MySQL databases easier.</description>
@@ -25,7 +25,7 @@
         <developerConnection>scm:git:git@github.com:simplyianm/easydb.git</developerConnection>
         <connection>scm:git:git://github.com/simplyianm/easydb.git</connection>
         <url>https://github.com/simplyianm/easydb</url>
-      <tag>easydb-0.1.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <ciManagement>
